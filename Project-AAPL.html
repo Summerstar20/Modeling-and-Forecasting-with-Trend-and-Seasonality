@@ -16,7 +16,7 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -103,33 +103,33 @@ summary {
 <style type="text/css">
 /* padding for bootstrap navbar */
 body {
-  padding-top: 51px;
+  padding-top: 60px;
   padding-bottom: 40px;
 }
 /* offset scroll position for anchor links (for fixed navbar)  */
 .section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .dropdown-submenu {
   position: relative;
@@ -299,105 +299,34 @@ $(document).ready(function () {
 
 <div id="load-libraries" class="section level1">
 <h1>Load Libraries</h1>
-<pre class="r"><code>library(&quot;fImport&quot;)</code></pre>
-<pre><code>## Loading required package: timeDate</code></pre>
-<pre><code>## Loading required package: timeSeries</code></pre>
-<pre class="r"><code>library(RQuantLib)</code></pre>
-<pre><code>## Sufficient QuantLib version with insufficient configuration.</code></pre>
-<pre><code>## Try configuring your build with the --enable-intraday argument.</code></pre>
-<pre><code>## 
-## Attaching package: &#39;RQuantLib&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:timeDate&#39;:
-## 
-##     isHoliday, isWeekend</code></pre>
-<pre class="r"><code>library(nlstools)</code></pre>
-<pre><code>## 
-## &#39;nlstools&#39; has been loaded.</code></pre>
-<pre><code>## IMPORTANT NOTICE: Most nonlinear regression models and data set examples</code></pre>
-<pre><code>## related to predictive microbiolgy have been moved to the package &#39;nlsMicrobio&#39;</code></pre>
-<pre class="r"><code>library(tseries)</code></pre>
-<pre><code>## Registered S3 method overwritten by &#39;quantmod&#39;:
-##   method            from
-##   as.zoo.data.frame zoo</code></pre>
-<pre><code>## 
-##     &#39;tseries&#39; version: 0.10-47
-## 
-##     &#39;tseries&#39; is a package for time series analysis and
-##     computational finance.
-## 
-##     See &#39;library(help=&quot;tseries&quot;)&#39; for details.</code></pre>
-<pre class="r"><code>library(Quandl)</code></pre>
-<pre><code>## Loading required package: xts</code></pre>
-<pre><code>## Loading required package: zoo</code></pre>
-<pre><code>## 
-## Attaching package: &#39;zoo&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:timeSeries&#39;:
-## 
-##     time&lt;-</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     as.Date, as.Date.numeric</code></pre>
-<pre class="r"><code>library(zoo)
-library(PerformanceAnalytics)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;PerformanceAnalytics&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:timeDate&#39;:
-## 
-##     kurtosis, skewness</code></pre>
-<pre><code>## The following object is masked from &#39;package:graphics&#39;:
-## 
-##     legend</code></pre>
-<pre class="r"><code>library(quantmod)</code></pre>
-<pre><code>## Loading required package: TTR</code></pre>
-<pre><code>## Version 0.4-0 included new data defaults. See ?getSymbols.</code></pre>
-<pre class="r"><code>library(FinTS)
-library(forecast)</code></pre>
-<pre><code>## This is forecast 8.12 
-##   Crossvalidated is a great place to get help on forecasting issues:
-##   http://stats.stackexchange.com/tags/forecasting.</code></pre>
-<pre><code>## 
-## Attaching package: &#39;forecast&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:FinTS&#39;:
-## 
-##     Acf</code></pre>
-<pre class="r"><code>require(stats)
+<pre class="r"><code>library(&quot;fImport&quot;)
+library(RQuantLib)
+library(nlstools)
+library(tseries)
+library(Quandl)
+library(zoo)
+library(PerformanceAnalytics)
+library(quantmod)
+library(FinTS)
+library(forecast)
+require(stats)
 #library(stockPortfolio)
-library(vars)</code></pre>
-<pre><code>## Loading required package: MASS</code></pre>
-<pre><code>## Loading required package: strucchange</code></pre>
-<pre><code>## Loading required package: sandwich</code></pre>
-<pre><code>## Loading required package: urca</code></pre>
-<pre><code>## Loading required package: lmtest</code></pre>
-<pre class="r"><code>library(tseries, quietly = T)
+library(vars)
+library(tseries, quietly = T)
 library(forecast, quietly = T)
-library(fBasics)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;fBasics&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:TTR&#39;:
-## 
-##     volatility</code></pre>
-<pre class="r"><code>library(timsac)
+library(fBasics)
+library(timsac)
 library(TTR)
 library(lattice)
 library(foreign)
 library(MASS)
-require(stats4)</code></pre>
-<pre><code>## Loading required package: stats4</code></pre>
-<pre class="r"><code>library(KernSmooth)</code></pre>
-<pre><code>## KernSmooth 2.23 loaded
-## Copyright M. P. Wand 1997-2009</code></pre>
-<pre class="r"><code>library(fastICA)
+require(stats4)
+library(KernSmooth)
+library(fastICA)
 library(cluster)
 library(leaps)
-library(mgcv)</code></pre>
-<pre><code>## Loading required package: nlme</code></pre>
-<pre><code>## 
-## Attaching package: &#39;nlme&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:forecast&#39;:
-## 
-##     getResponse</code></pre>
-<pre><code>## This is mgcv 1.8-31. For overview type &#39;help(&quot;mgcv-package&quot;)&#39;.</code></pre>
-<pre class="r"><code>library(rpart)
+library(mgcv)
+library(rpart)
 require(&quot;datasets&quot;)
 require(graphics)
 library(RColorBrewer)
@@ -405,78 +334,14 @@ library(lattice)
 library(foreign)
 library(KernSmooth)
 library(mgcv)
-library(DAAG)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;DAAG&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:MASS&#39;:
-## 
-##     hills</code></pre>
-<pre class="r"><code>library(&quot;TTR&quot;)
-library(tis)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;tis&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:mgcv&#39;:
-## 
-##     ti</code></pre>
-<pre><code>## The following object is masked from &#39;package:forecast&#39;:
-## 
-##     easter</code></pre>
-<pre><code>## The following object is masked from &#39;package:quantmod&#39;:
-## 
-##     Lag</code></pre>
-<pre><code>## The following object is masked from &#39;package:TTR&#39;:
-## 
-##     lags</code></pre>
-<pre><code>## The following objects are masked from &#39;package:RQuantLib&#39;:
-## 
-##     isBusinessDay, isHoliday</code></pre>
-<pre><code>## The following objects are masked from &#39;package:timeSeries&#39;:
-## 
-##     description, interpNA</code></pre>
-<pre><code>## The following objects are masked from &#39;package:timeDate&#39;:
-## 
-##     dayOfWeek, dayOfYear, isHoliday</code></pre>
-<pre class="r"><code>library(&quot;forecast&quot;)
-require(astsa)</code></pre>
-<pre><code>## Loading required package: astsa</code></pre>
-<pre><code>## 
-## Attaching package: &#39;astsa&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:fBasics&#39;:
-## 
-##     nyse</code></pre>
-<pre><code>## The following object is masked from &#39;package:forecast&#39;:
-## 
-##     gas</code></pre>
-<pre class="r"><code>library(seasonal)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;seasonal&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:astsa&#39;:
-## 
-##     unemp</code></pre>
-<pre><code>## The following objects are masked from &#39;package:timeSeries&#39;:
-## 
-##     outlier, series</code></pre>
-<pre class="r"><code>library(fpp2)</code></pre>
-<pre><code>## Loading required package: ggplot2</code></pre>
-<pre><code>## Loading required package: fma</code></pre>
-<pre><code>## 
-## Attaching package: &#39;fma&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:astsa&#39;:
-## 
-##     chicken, sales</code></pre>
-<pre><code>## The following objects are masked from &#39;package:DAAG&#39;:
-## 
-##     milk, ozone</code></pre>
-<pre><code>## The following objects are masked from &#39;package:MASS&#39;:
-## 
-##     cement, housing, petrol</code></pre>
-<pre><code>## Loading required package: expsmooth</code></pre>
-<pre><code>## 
-## Attaching package: &#39;fpp2&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:astsa&#39;:
-## 
-##     oil</code></pre>
-<pre class="r"><code>library(ggplot2)
+library(DAAG)
+library(&quot;TTR&quot;)
+library(tis)
+library(&quot;forecast&quot;)
+require(astsa)
+library(seasonal)
+library(fpp2)
+library(ggplot2)
 library(fma)
 library(seasonal)</code></pre>
 <div id="i.-introduction" class="section level2">
@@ -491,14 +356,6 @@ library(seasonal)</code></pre>
 <pre class="r"><code>#get the monthly data we need
 getSymbols(&quot;AAPL&quot;, from = &quot;2015-01-01&quot;, to = &quot;2019-12-31&quot;,
            periodicity = &quot;monthly&quot;, curl.options = list())</code></pre>
-<pre><code>## &#39;getSymbols&#39; currently uses auto.assign=TRUE by default, but will
-## use auto.assign=FALSE in 0.5-0. You will still be able to use
-## &#39;loadSymbols&#39; to automatically load data. getOption(&quot;getSymbols.env&quot;)
-## and getOption(&quot;getSymbols.auto.assign&quot;) will still be checked for
-## alternate defaults.
-## 
-## This message is shown once per session and may be disabled by setting 
-## options(&quot;getSymbols.warning4.0&quot;=FALSE). See ?getSymbols for details.</code></pre>
 <pre><code>## [1] &quot;AAPL&quot;</code></pre>
 <pre class="r"><code>#create a time series object
 adj.close &lt;- ts(AAPL$AAPL.Adjusted, start = 2015, frequency = 12)
@@ -818,16 +675,8 @@ accuracy(fit2)</code></pre>
 <p>Then we compare mean sqaured error with the non-linear model in problem 1 and the final model.<br />
 </p>
 <pre class="r"><code>#install packages containing mse function
-library(mltools)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;mltools&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:PerformanceAnalytics&#39;:
-## 
-##     skewness</code></pre>
-<pre><code>## The following object is masked from &#39;package:timeDate&#39;:
-## 
-##     skewness</code></pre>
-<pre class="r"><code>mse(preds = fit2$fitted.values, actuals = adj.close)</code></pre>
+library(mltools)
+mse(preds = fit2$fitted.values, actuals = adj.close)</code></pre>
 <pre><code>## [1] 176.2679</code></pre>
 <pre class="r"><code>mse(preds = m2$fitted.values, actuals = adj.close)</code></pre>
 <pre><code>## [1] 193.3079</code></pre>
