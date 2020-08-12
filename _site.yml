@@ -9,4 +9,4 @@ navbar:
       href: Project-AAPL.html
 output:
   html_document:
-theme: cosmo 
+    theme: flatly 
