@@ -1,0 +1,12 @@
+name: "Forecasting"
+output_dir: "."
+navbar:
+  title: "Forecasting Using Trend and Seasonality"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Project AAPL"
+      href: Project-AAPL.html
+output:
+  html_document:
+theme: cosmo 

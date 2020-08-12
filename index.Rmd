@@ -1,0 +1,5 @@
+---
+title: "Forecasting"
+---
+
+Modeling and Forecasting Using Trend and Seasonality
